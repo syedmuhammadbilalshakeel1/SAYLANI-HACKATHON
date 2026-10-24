@@ -241,12 +241,13 @@
 }
         /* == admin dashboard css == */
 
-/* .bg-orange { background-color: #f58220; }
+/* ===== Small helper colors ===== */
+.bg-orange { background-color: #f58220; }
 .bg-ink    { background-color: #2b2b2b; }
 .bg-green  { background-color: #2e9e5b; }
 .bg-red    { background-color: #e53935; }
 .bg-amber  { background-color: #f0a500; }
-.bg-blue   { background-color: #3b6fe0; } */
+.bg-blue   { background-color: #3b6fe0; }
 
 .green-text { color: #2e9e5b; }
 
@@ -1050,6 +1051,186 @@
 .st-leave   { background-color: #e8f0fe; color: #3b6fe0; }
 
 
+/* ===== Employee form page ===== */
+
+/* Dashboard > Employees > Add Employee */
+.crumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #777777;
+}
+
+.crumb a {
+    color: #777777;
+    text-decoration: none;
+}
+
+.crumb a:hover {
+    color: #e0720f;
+}
+
+.crumb i {
+    font-size: 10px;
+}
+
+.crumb span {
+    color: #e0720f;
+    font-weight: 500;
+}
+
+/* form sections */
+.form-section + .form-section {
+    margin-top: 26px;
+    padding-top: 24px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.form-section-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+}
+
+.form-section-title i {
+    width: 28px;
+    height: 28px;
+    background-color: #fff3e8;
+    color: #f58220;
+    border-radius: 8px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* labels and inputs */
+.f-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: #2b2b2b;
+    margin-bottom: 6px;
+}
+
+.f-input {
+    width: 100%;
+    height: 44px;
+    padding: 0 14px;
+    background-color: #ffffff;
+    color: #2b2b2b;
+    border: 1px solid #dcdcdc;
+    border-radius: 12px;
+    font-size: 13px;
+    outline: none;
+    box-shadow: none;
+}
+
+.f-input::placeholder {
+    color: #a5a5a5;
+}
+
+.f-input:focus {
+    border-color: #f58220;
+    box-shadow: 0 0 0 3px rgba(245, 130, 32, 0.12);
+}
+
+.f-input:user-invalid {
+    border-color: #e53935;
+}
+
+.f-hint {
+    font-size: 11px;
+    color: #888888;
+    margin: 5px 0 0 0;
+}
+
+/* buttons */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 28px;
+    padding-top: 22px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.btn-save {
+    height: 42px;
+    padding: 0 24px;
+    background-color: #f58220;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.btn-save:hover {
+    background-color: #e0720f;
+}
+
+.btn-cancel {
+    height: 42px;
+    padding: 0 22px;
+    background-color: #ffffff;
+    color: #555555;
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-cancel:hover {
+    background-color: #f7f7f7;
+    color: #555555;
+}
+
+/* quick notes card */
+.note-item {
+    display: flex;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.note-item:first-of-type {
+    padding-top: 0;
+}
+
+.note-item.last {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.note-item .chip {
+    flex-shrink: 0;
+}
+
+.note-title {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.note-text {
+    font-size: 12px;
+    color: #888888;
+    line-height: 1.45;
+    margin-top: 2px;
+}
+
+
+/* ===== Admin: tablet / mobile (sidebar becomes offcanvas) ===== */
+
+
+
 
 
         /* ===== Mobile /MEDIA QUERY ===== */
@@ -1066,6 +1247,8 @@
 
     .topbar {
         padding: 0 16px;
+        position: sticky;
+        top: 0px;
     }
 
     .content {
@@ -1097,9 +1280,6 @@
         @media only screen and (max-width:768px){
 
         }
-        @media only screen and (max-width:425px){
-
-        }
         @media only screen and (max-width: 575px) {
     .profile-name {
         display: none;
@@ -1118,6 +1298,9 @@
         width: 14px;
     }
 }
+        @media only screen and (max-width:425px){
+
+        }
         @media only screen and (max-width:375px){
 
         }
