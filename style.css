@@ -1,10 +1,10 @@
 
         /* ===== Page ===== */
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Roboto", sans-serif;
             background-color: #f3f3f3;
             color: #2b2b2b;
-            min-height: 100vh;
+            min-height: 100dvh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -33,7 +33,7 @@
             justify-content: flex-end;
             padding: 0 34px 38px 34px;
             border-radius: 28px 44px 44px 28px;
-            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLDJ5obplBusHEy2jrmUvNQYd8fw7OQHJuxi-4_YXiLA&s");
+            background-image: url("./image/Collaborative\ Teamwork\ Around\ a\ Laptop.png");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
