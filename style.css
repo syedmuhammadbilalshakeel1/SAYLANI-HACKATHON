@@ -1227,6 +1227,222 @@
 }
 
 
+/* ===== Company Rules page ===== */
+
+/* input with a small unit text on the right (minutes / days) */
+.input-suffix {
+    position: relative;
+}
+
+.input-suffix .f-input {
+    padding-right: 80px;
+}
+
+.input-suffix .suffix {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    height: 32px;
+    padding: 0 12px;
+    background-color: #fff3e8;
+    color: #e0720f;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+/* working day buttons (checkboxes look like chips) */
+.day-picker {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.day-picker input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.day-picker label {
+    min-width: 64px;
+    height: 44px;
+    padding: 0 16px;
+    background-color: #ffffff;
+    color: #555555;
+    border: 1px solid #dcdcdc;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.day-picker label:hover {
+    border-color: #f58220;
+}
+
+.day-picker input:checked + label {
+    background-color: #f58220;
+    border-color: #f58220;
+    color: #ffffff;
+}
+
+.day-picker input:focus-visible + label {
+    box-shadow: 0 0 0 3px rgba(245, 130, 32, 0.25);
+}
+
+/* dark summary card */
+.rule-summary .sd-text {
+    margin-bottom: 0;
+    max-width: 85%;
+}
+
+
+/* ===== Employee dashboard page ===== */
+
+/* sidebar links scroll smoothly to the section */
+html {
+    scroll-behavior: smooth;
+}
+
+.red-text { color: #e53935; }
+
+.sub-title {
+    font-size: 13px;
+    font-weight: 700;
+    margin: 24px 0 8px 0;
+}
+
+.sub-title.first {
+    margin-top: 0;
+}
+
+/* textarea and select use the same look as .f-input */
+.f-textarea {
+    height: auto;
+    padding: 12px 14px;
+    resize: vertical;
+}
+
+select.f-input {
+    padding-right: 30px;
+}
+
+.btn-save:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.btn-save:disabled:hover {
+    background-color: #f58220;
+}
+
+/* today check in / check out box */
+.today-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    padding: 16px 18px;
+    background-color: #fff8f2;
+    border: 1px solid #fde6d2;
+    border-radius: 16px;
+}
+
+.today-time {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.today-time strong {
+    font-size: 16px;
+}
+
+.tt-label {
+    font-size: 11px;
+    color: #888888;
+}
+
+.today-actions {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.today-actions .btn-save,
+.today-actions .btn-cancel {
+    height: 40px;
+    padding: 0 16px;
+    font-size: 13px;
+}
+
+/* payslip */
+.pay-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f2f2f2;
+    font-size: 13px;
+    color: #555555;
+}
+
+.pay-row strong {
+    color: #2b2b2b;
+    font-weight: 600;
+}
+
+.pay-row strong.red-text {
+    color: #e53935;
+}
+
+.pay-row.total {
+    border-bottom: none;
+    font-weight: 600;
+    color: #2b2b2b;
+}
+
+.net-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 18px;
+    padding: 16px 20px;
+    background-color: #1c1815;
+    color: #ffffff;
+    border-radius: 16px;
+}
+
+.net-box span {
+    font-size: 13px;
+    color: #cfc7bf;
+}
+
+.net-box strong {
+    font-size: 22px;
+    color: #f58220;
+}
+
+/* announcements */
+.ann-date {
+    font-size: 11px;
+    color: #888888;
+    white-space: nowrap;
+}
+
+.note-item .tag {
+    margin-left: 8px;
+}
+
+
 /* ===== Admin: tablet / mobile (sidebar becomes offcanvas) ===== */
 
 
@@ -1247,8 +1463,6 @@
 
     .topbar {
         padding: 0 16px;
-        position: sticky;
-        top: 0px;
     }
 
     .content {
