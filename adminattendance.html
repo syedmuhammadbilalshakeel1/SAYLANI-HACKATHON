@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HCM Lite - Attendance</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- common css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR (Bootstrap offcanvas on small screens) ================= -->
+    <div class="offcanvas-lg offcanvas-start sidebar" tabindex="-1" id="sidebarMenu" aria-label="Sidebar menu">
+        <div class="offcanvas-body">
+            <div class="sidebar-inner">
+
+                <div class="sidebar-top">
+                    <div class="brand">
+                        <span class="brand-icon"><i class="bi bi-fire"></i></span>
+                        <span class="brand-name">HCM Lite</span>
+                    </div>
+
+                    <button type="button" class="btn-close btn-close-white d-lg-none" data-bs-dismiss="offcanvas"
+                        data-bs-target="#sidebarMenu" aria-label="Close"></button>
+                </div>
+
+                <div class="menu-title">MENU</div>
+                <a href="./adminDashboard.html" class="menu-link"><i class="bi bi-grid-1x2-fill"></i> Dashboard</a>
+                <a href="./employee.html" class="menu-link"><i class="bi bi-people"></i> Employees</a>
+                <a href="./companyrules.html" class="menu-link"><i class="bi bi-sliders"></i> Company Rules</a>
+                <a href="./adminattendance.html" class="menu-link active"><i class="bi bi-calendar-check"></i> Attendance</a>
+                <a href="./adminleaves.html" class="menu-link"><i class="bi bi-calendar-event"></i> Leave Requests</a>
+
+                                <div class="menu-title">PAGES</div>
+                <!-- <a href="#" class="menu-link"><i class="bi bi-gear"></i> Settings</a> -->
+                <a href="index.html" class="menu-link"><i class="bi bi-box-arrow-left"></i> Logout</a>
+
+                <div class="sidebar-user">
+                    <div class="avatar">A</div>
+                    <div>
+                        <div class="su-name">Administrator</div>
+                        <div class="su-mail">admin@email.com</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================= MAIN AREA ================= -->
+    <div class="main">
+
+        <!-- ===== Top bar ===== -->
+        <div class="topbar">
+
+            <button type="button" class="icon-btn d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu"
+                aria-controls="sidebarMenu" aria-label="Open menu">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <button type="button" class="btn-create"><i class="bi bi-plus-lg"></i> Create</button>
+
+            <div class="search-box">
+                <input type="text" placeholder="Search anything in HCM Lite...">
+                <i class="bi bi-search"></i>
+            </div>
+
+            <div class="top-right">
+                <button type="button" class="icon-btn"><i class="bi bi-fullscreen"></i></button>
+                <button type="button" class="icon-btn">
+                    <i class="bi bi-bell"></i>
+                    <span class="notif-dot"></span>
+                </button>
+                <div class="profile">
+                    <div class="avatar">A</div>
+                    <span class="profile-name">Administrator</span>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ===== Page content ===== -->
+        <div class="content">
+
+            <!-- Page heading -->
+            <div class="page-head">
+                <div>
+                    <h1>Attendance</h1>
+                    <div class="crumb">
+                        <a href="adminDashboard.html">Dashboard</a>
+                        <i class="bi bi-chevron-right"></i>
+                        <span>Attendance</span>
+                    </div>
+                </div>
+                <div class="date-pill"><i class="bi bi-calendar3"></i> October 25, 2026</div>
+            </div>
+
+
+         
+
+
+          
+
+
+            <!-- ===== 3. Employee attendance list ===== -->
+            <div class="row g-3 mb-4">
+                <div class="col-12">
+                    <div class="card-box">
+
+                        <div class="card-head">
+                            <div>
+                                <h3 class="card-title">Employee Attendance List</h3>
+                                <p class="card-sub">Who is present and who is absent today, with check-in and check-out records</p>
+                            </div>
+                            <div class="legend">
+                                <span><span class="dot bg-green"></span> Present</span>
+                                <span><span class="dot bg-amber"></span> Late</span>
+                                <span><span class="dot bg-red"></span> Absent</span>
+                                <span><span class="dot bg-blue"></span> On Leave</span>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table align-middle att-table">
+                                <thead>
+                                    <tr>
+                                        <th>Employee</th>
+                                        <th>Department</th>
+                                        <th>Check In</th>
+                                        <th>Check Out</th>
+                                        <th>Working Hours</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="emp">
+                                                <div class="avatar light">AK</div>
+                                                <div>
+                                                    <div class="emp-name">Ahmed Khan</div>
+                                                    <div class="emp-id">EMP-1001</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Engineering</td>
+                                        <td>08:52 AM</td>
+                                        <td>05:03 PM</td>
+                                        <td>8h 11m</td>
+                                        <td><span class="status st-present">Present</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="emp">
+                                                <div class="avatar light">SA</div>
+                                                <div>
+                                                    <div class="emp-name">Sara Ali</div>
+                                                    <div class="emp-id">EMP-1014</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Human Resources</td>
+                                        <td>09:05 AM</td>
+                                        <td>05:30 PM</td>
+                                        <td>8h 25m</td>
+                                        <td><span class="status st-present">Present</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="emp">
+                                                <div class="avatar light">UT</div>
+                                                <div>
+                                                    <div class="emp-name">Usman Tariq</div>
+                                                    <div class="emp-id">EMP-1023</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Sales</td>
+                                        <td>09:48 AM</td>
+                                        <td>06:00 PM</td>
+                                        <td>8h 12m</td>
+                                        <td><span class="status st-late">Late</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="emp">
+                                                <div class="avatar light">AM</div>
+                                                <div>
+                                                    <div class="emp-name">Ayesha Malik</div>
+                                                    <div class="emp-id">EMP-1031</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Finance</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td><span class="status st-absent">Absent</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="emp">
+                                                <div class="avatar light">BH</div>
+                                                <div>
+                                                    <div class="emp-name">Bilal Hussain</div>
+                                                    <div class="emp-id">EMP-1046</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Marketing</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td><span class="status st-leave">On Leave</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="emp">
+                                                <div class="avatar light">HR</div>
+                                                <div>
+                                                    <div class="emp-name">Hina Raza</div>
+                                                    <div class="emp-id">EMP-1052</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Support</td>
+                                        <td>08:58 AM</td>
+                                        <td>05:15 PM</td>
+                                        <td>8h 17m</td>
+                                        <td><span class="status st-present">Present</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="emp">
+                                                <div class="avatar light">FN</div>
+                                                <div>
+                                                    <div class="emp-name">Fatima Noor</div>
+                                                    <div class="emp-id">EMP-1067</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Sales</td>
+                                        <td>09:00 AM</td>
+                                        <td>01:10 PM</td>
+                                        <td>4h 10m</td>
+                                        <td><span class="status st-half">Half Day</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="emp">
+                                                <div class="avatar light">ZA</div>
+                                                <div>
+                                                    <div class="emp-name">Zain Abbas</div>
+                                                    <div class="emp-id">EMP-1072</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Engineering</td>
+                                        <td>09:01 AM</td>
+                                        <td>05:08 PM</td>
+                                        <td>8h 07m</td>
+                                        <td><span class="status st-present">Present</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="emp">
+                                                <div class="avatar light">HS</div>
+                                                <div>
+                                                    <div class="emp-name">Hamza Sheikh</div>
+                                                    <div class="emp-id">EMP-1078</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Sales</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td><span class="status st-absent">Absent</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="emp">
+                                                <div class="avatar light">MZ</div>
+                                                <div>
+                                                    <div class="emp-name">Mariam Zahid</div>
+                                                    <div class="emp-id">EMP-1085</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Marketing</td>
+                                        <td>09:22 AM</td>
+                                        <td>05:40 PM</td>
+                                        <td>8h 18m</td>
+                                        <td><span class="status st-late">Late</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="emp">
+                                                <div class="avatar light">KA</div>
+                                                <div>
+                                                    <div class="emp-name">Kamran Aslam</div>
+                                                    <div class="emp-id">EMP-1090</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Engineering</td>
+                                        <td>08:47 AM</td>
+                                        <td>05:00 PM</td>
+                                        <td>8h 13m</td>
+                                        <td><span class="status st-present">Present</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="emp">
+                                                <div class="avatar light">NF</div>
+                                                <div>
+                                                    <div class="emp-name">Nida Farooq</div>
+                                                    <div class="emp-id">EMP-1096</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Human Resources</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td><span class="status st-absent">Absent</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <!-- end content -->
+
+    </div>
+    <!-- end main -->
+
+    <!-- Bootstrap js (needed for the sidebar offcanvas) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

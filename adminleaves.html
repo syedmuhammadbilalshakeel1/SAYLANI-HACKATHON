@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HCM Lite - Leave Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- common css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR (Bootstrap offcanvas on small screens) ================= -->
+    <div class="offcanvas-lg offcanvas-start sidebar" tabindex="-1" id="sidebarMenu" aria-label="Sidebar menu">
+        <div class="offcanvas-body">
+            <div class="sidebar-inner">
+
+                <div class="sidebar-top">
+                    <div class="brand">
+                        <span class="brand-icon"><i class="bi bi-fire"></i></span>
+                        <span class="brand-name">HCM Lite</span>
+                    </div>
+
+                    <button type="button" class="btn-close btn-close-white d-lg-none" data-bs-dismiss="offcanvas"
+                        data-bs-target="#sidebarMenu" aria-label="Close"></button>
+                </div>
+
+                <div class="menu-title">MENU</div>
+                <a href="./adminDashboard.html" class="menu-link"><i class="bi bi-grid-1x2-fill"></i> Dashboard</a>
+                <a href="./employee.html" class="menu-link"><i class="bi bi-people"></i> Employees</a>
+                <a href="./companyrules.html" class="menu-link"><i class="bi bi-sliders"></i> Company Rules</a>
+                <a href="./adminattendance.html" class="menu-link"><i class="bi bi-calendar-check"></i> Attendance</a>
+                <a href="./adminleaves.html" class="menu-link active"><i class="bi bi-calendar-event"></i> Leave Requests</a>
+
+                
+                <div class="menu-title">PAGES</div>
+                <!-- <a href="#" class="menu-link"><i class="bi bi-gear"></i> Settings</a> -->
+                <a href="index.html" class="menu-link"><i class="bi bi-box-arrow-left"></i> Logout</a>
+
+                <div class="sidebar-user">
+                    <div class="avatar">A</div>
+                    <div>
+                        <div class="su-name">Administrator</div>
+                        <div class="su-mail">admin@email.com</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================= MAIN AREA ================= -->
+    <div class="main">
+
+        <!-- ===== Top bar ===== -->
+        <div class="topbar">
+
+            <button type="button" class="icon-btn d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu"
+                aria-controls="sidebarMenu" aria-label="Open menu">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <button type="button" class="btn-create"><i class="bi bi-plus-lg"></i> Create</button>
+
+            <div class="search-box">
+                <input type="text" placeholder="Search anything in HCM Lite...">
+                <i class="bi bi-search"></i>
+            </div>
+
+            <div class="top-right">
+                <button type="button" class="icon-btn"><i class="bi bi-fullscreen"></i></button>
+                <button type="button" class="icon-btn">
+                    <i class="bi bi-bell"></i>
+                    <span class="notif-dot"></span>
+                </button>
+                <div class="profile">
+                    <div class="avatar">A</div>
+                    <span class="profile-name">Administrator</span>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ===== Page content ===== -->
+        <div class="content">
+
+            <!-- Page heading -->
+            <div class="page-head">
+                <div>
+                    <h1>Leave Management</h1>
+                    <div class="crumb">
+                        <a href="adminDashboard.html">Dashboard</a>
+                        <i class="bi bi-chevron-right"></i>
+                        <span>Leave Management</span>
+                    </div>
+                </div>
+                <!-- <a href="adminDashboard.html" class="btn-cancel"><i class="bi bi-arrow-left me-1"></i> Back to Dashboard</a> -->
+            </div>
+
+
+        
+
+
+        
+
+
+            <!-- ===== 3. All leave requests ===== -->
+            <div class="row g-3 mb-4">
+                <div class="col-12">
+                    <div class="card-box">
+
+                        <div class="card-head">
+                            <div>
+                                <h3 class="card-title">All Leave Requests</h3>
+                                <p class="card-sub">Status and decision comment of every request</p>
+                            </div>
+                            <div class="legend">
+                                <span><span class="dot bg-amber"></span> Pending</span>
+                                <span><span class="dot bg-green"></span> Approved</span>
+                                <span><span class="dot bg-red"></span> Rejected</span>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table align-middle att-table">
+                                <thead>
+                                    <tr>
+                                        <th>Employee</th>
+                                        <th>Leave Type</th>
+                                        <th>From</th>
+                                        <th>To</th>
+                                        <th>Days</th>
+                                        <th>Reason</th>
+                                        <th>Status</th>
+                                        <th>Decision Comment</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="emp">
+                                                <div class="avatar light">FN</div>
+                                                <div>
+                                                    <div class="emp-name">Fatima Noor</div>
+                                                    <div class="emp-id">EMP-1067</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Sick Leave</td>
+                                        <td>26 Oct 2026</td>
+                                        <td>27 Oct 2026</td>
+                                        <td>2</td>
+                                        <td>Fever and doctor appointment</td>
+                                        <td><span class="status st-late">Pending</span></td>
+                                        <td class="cmt">--</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="emp">
+                                                <div class="avatar light">ZA</div>
+                                                <div>
+                                                    <div class="emp-name">Zain Abbas</div>
+                                                    <div class="emp-id">EMP-1072</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Annual Leave</td>
+                                        <td>28 Oct 2026</td>
+                                        <td>01 Nov 2026</td>
+                                        <td>5</td>
+                                        <td>Family wedding</td>
+                                        <td><span class="status st-late">Pending</span></td>
+                                        <td class="cmt">--</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="emp">
+                                                <div class="avatar light">HS</div>
+                                                <div>
+                                                    <div class="emp-name">Hamza Sheikh</div>
+                                                    <div class="emp-id">EMP-1078</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Casual Leave</td>
+                                        <td>30 Oct 2026</td>
+                                        <td>30 Oct 2026</td>
+                                        <td>1</td>
+                                        <td>Personal work</td>
+                                        <td><span class="status st-late">Pending</span></td>
+                                        <td class="cmt">--</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="emp">
+                                                <div class="avatar light">MZ</div>
+                                                <div>
+                                                    <div class="emp-name">Mariam Zahid</div>
+                                                    <div class="emp-id">EMP-1085</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Annual Leave</td>
+                                        <td>03 Nov 2026</td>
+                                        <td>07 Nov 2026</td>
+                                        <td>5</td>
+                                        <td>Family trip</td>
+                                        <td><span class="status st-late">Pending</span></td>
+                                        <td class="cmt">--</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="emp">
+                                                <div class="avatar light">BH</div>
+                                                <div>
+                                                    <div class="emp-name">Bilal Hussain</div>
+                                                    <div class="emp-id">EMP-1046</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Annual Leave</td>
+                                        <td>23 Oct 2026</td>
+                                        <td>27 Oct 2026</td>
+                                        <td>5</td>
+                                        <td>Visiting family</td>
+                                        <td><span class="status st-present">Approved</span></td>
+                                        <td class="cmt">Enjoy your trip.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="emp">
+                                                <div class="avatar light">SA</div>
+                                                <div>
+                                                    <div class="emp-name">Sara Ali</div>
+                                                    <div class="emp-id">EMP-1014</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Sick Leave</td>
+                                        <td>12 Oct 2026</td>
+                                        <td>13 Oct 2026</td>
+                                        <td>2</td>
+                                        <td>Fever and flu</td>
+                                        <td><span class="status st-present">Approved</span></td>
+                                        <td class="cmt">Get well soon.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="emp">
+                                                <div class="avatar light">UT</div>
+                                                <div>
+                                                    <div class="emp-name">Usman Tariq</div>
+                                                    <div class="emp-id">EMP-1023</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Casual Leave</td>
+                                        <td>15 Oct 2026</td>
+                                        <td>15 Oct 2026</td>
+                                        <td>1</td>
+                                        <td>Personal work</td>
+                                        <td><span class="status st-absent">Rejected</span></td>
+                                        <td class="cmt">Sales target week. Please reschedule.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="emp">
+                                                <div class="avatar light">HR</div>
+                                                <div>
+                                                    <div class="emp-name">Hina Raza</div>
+                                                    <div class="emp-id">EMP-1052</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Annual Leave</td>
+                                        <td>05 Oct 2026</td>
+                                        <td>09 Oct 2026</td>
+                                        <td>5</td>
+                                        <td>Family vacation</td>
+                                        <td><span class="status st-present">Approved</span></td>
+                                        <td class="cmt">Approved as planned.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="emp">
+                                                <div class="avatar light">KA</div>
+                                                <div>
+                                                    <div class="emp-name">Kamran Aslam</div>
+                                                    <div class="emp-id">EMP-1090</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Annual Leave</td>
+                                        <td>14 Oct 2026</td>
+                                        <td>16 Oct 2026</td>
+                                        <td>3</td>
+                                        <td>Short trip</td>
+                                        <td><span class="status st-absent">Rejected</span></td>
+                                        <td class="cmt">Project deadline. Apply after the release.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="emp">
+                                                <div class="avatar light">AK</div>
+                                                <div>
+                                                    <div class="emp-name">Ahmed Khan</div>
+                                                    <div class="emp-id">EMP-1001</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Casual Leave</td>
+                                        <td>09 Oct 2026</td>
+                                        <td>09 Oct 2026</td>
+                                        <td>1</td>
+                                        <td>Bank work</td>
+                                        <td><span class="status st-present">Approved</span></td>
+                                        <td class="cmt">Approved.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                       
+                    </div>
+                </div>
+            </div>
+
+
+         
+
+        </div>
+        <!-- end content -->
+
+    </div>
+    <!-- end main -->
+
+    <!-- Bootstrap js (needed for the sidebar offcanvas) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

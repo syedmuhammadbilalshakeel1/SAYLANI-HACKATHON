@@ -38,15 +38,12 @@
                 <a href="adminDashboard.html" class="menu-link active"><i class="bi bi-grid-1x2-fill"></i> Dashboard</a>
                 <a href="employee.html" class="menu-link"><i class="bi bi-people"></i> Employees</a>
                 <a href="companyRules.html" class="menu-link"><i class="bi bi-sliders"></i> Company Rules</a>
-                <a href="#" class="menu-link"><i class="bi bi-calendar-check"></i> Attendance</a>
-                <a href="#" class="menu-link"><i class="bi bi-calendar-event"></i> Leave Requests</a>
+                <a href="./adminattendance.html" class="menu-link"><i class="bi bi-calendar-check"></i> Attendance</a>
+                <a href="./adminleaves.html" class="menu-link"><i class="bi bi-calendar-event"></i> Leave Requests</a>
     
-                <div class="menu-title">MANAGEMENT</div>
-                <a href="#" class="menu-link"><i class="bi bi-building"></i> Departments</a>
-                <a href="#" class="menu-link"><i class="bi bi-bar-chart"></i> Reports</a>
-    
+               
                 <div class="menu-title">PAGES</div>
-                <a href="#" class="menu-link"><i class="bi bi-gear"></i> Settings</a>
+                <!-- <a href="#" class="menu-link"><i class="bi bi-gear"></i> Settings</a> -->
                 <a href="index.html" class="menu-link"><i class="bi bi-box-arrow-left"></i> Logout</a>
     
                 <div class="sidebar-user">
@@ -102,7 +99,7 @@
             <!-- Page heading -->
             <div class="page-head">
                 <div>
-                    <h1>Dashboard</h1>
+                    <h1>Admin Dashboard</h1>
                     <p>An easy way to manage your team attendance with care and precision.</p>
                 </div>
                 <div class="date-pill">
@@ -187,7 +184,7 @@
             <div class="row g-3 mb-4">
 
                 <!-- Weekly attendance chart -->
-                <div class="col-12 col-xl-8">
+                <div class="col-12 col-xl-12">
                     <div class="card-box">
 
                         <div class="card-head">
@@ -228,8 +225,16 @@
                                 <div class="bar absent" style="height: 5%;" title="Absent"></div>
                             </div>
                             <div class="bar-group">
+                                <div class="bar present" style="height: 92%;" title="Present"></div>
+                                <div class="bar absent" style="height: 4%;" title="Absent"></div>
+                            </div>
+                            <div class="bar-group">
                                 <div class="bar present" style="height: 70%;" title="Present"></div>
                                 <div class="bar absent" style="height: 12%;" title="Absent"></div>
+                            </div>
+                            <div class="bar-group">
+                                <div class="bar present" style="height: 92%;" title="Present"></div>
+                                <div class="bar absent" style="height: 4%;" title="Absent"></div>
                             </div>
                             <div class="bar-group">
                                 <div class="bar present" style="height: 86%;" title="Present"></div>
@@ -251,42 +256,7 @@
                     </div>
                 </div>
 
-                <!-- Today's attendance donut -->
-                <div class="col-12 col-xl-4">
-                    <div class="card-box">
-
-                        <div class="card-head">
-                            <h3 class="card-title">Today's Attendance</h3>
-                        </div>
-
-                        <div class="donut">
-                            <div class="donut-hole">
-                                <strong>86%</strong>
-                                <span>Present</span>
-                            </div>
-                        </div>
-
-                        <div class="donut-list">
-                            <div class="donut-row">
-                                <span><span class="dot bg-green"></span> Present</span>
-                                <strong>214</strong>
-                            </div>
-                            <div class="donut-row">
-                                <span><span class="dot bg-amber"></span> Late</span>
-                                <strong>14</strong>
-                            </div>
-                            <div class="donut-row">
-                                <span><span class="dot bg-red"></span> Absent</span>
-                                <strong>12</strong>
-                            </div>
-                            <div class="donut-row">
-                                <span><span class="dot bg-blue"></span> On Leave</span>
-                                <strong>8</strong>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+              
 
             </div>
 
@@ -400,135 +370,6 @@
             </div>
 
 
-            <!-- ===== 4. Recent attendance table ===== -->
-            <div class="row g-3">
-                <div class="col-12">
-                    <div class="card-box">
-
-                        <div class="card-head">
-                            <div>
-                                <h3 class="card-title">Recent Attendance</h3>
-                                <p class="card-sub">Latest check-in and check-out records</p>
-                            </div>
-                            <a href="#" class="link-orange">View all</a>
-                        </div>
-
-                        <div class="table-responsive">
-                            <table class="table align-middle att-table">
-                                <thead>
-                                    <tr>
-                                        <th>Employee</th>
-                                        <th>Department</th>
-                                        <th>Check In</th>
-                                        <th>Check Out</th>
-                                        <th>Working Hours</th>
-                                        <th>Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="emp">
-                                                <div class="avatar light">AK</div>
-                                                <div>
-                                                    <div class="emp-name">Ahmed Khan</div>
-                                                    <div class="emp-id">EMP-1001</div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>Engineering</td>
-                                        <td>08:52 AM</td>
-                                        <td>05:03 PM</td>
-                                        <td>8h 11m</td>
-                                        <td><span class="status st-present">Present</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="emp">
-                                                <div class="avatar light">SA</div>
-                                                <div>
-                                                    <div class="emp-name">Sara Ali</div>
-                                                    <div class="emp-id">EMP-1014</div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>Human Resources</td>
-                                        <td>09:05 AM</td>
-                                        <td>05:30 PM</td>
-                                        <td>8h 25m</td>
-                                        <td><span class="status st-present">Present</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="emp">
-                                                <div class="avatar light">UT</div>
-                                                <div>
-                                                    <div class="emp-name">Usman Tariq</div>
-                                                    <div class="emp-id">EMP-1023</div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>Sales</td>
-                                        <td>09:48 AM</td>
-                                        <td>06:00 PM</td>
-                                        <td>8h 12m</td>
-                                        <td><span class="status st-late">Late</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="emp">
-                                                <div class="avatar light">AM</div>
-                                                <div>
-                                                    <div class="emp-name">Ayesha Malik</div>
-                                                    <div class="emp-id">EMP-1031</div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>Finance</td>
-                                        <td>--</td>
-                                        <td>--</td>
-                                        <td>--</td>
-                                        <td><span class="status st-absent">Absent</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="emp">
-                                                <div class="avatar light">BH</div>
-                                                <div>
-                                                    <div class="emp-name">Bilal Hussain</div>
-                                                    <div class="emp-id">EMP-1046</div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>Marketing</td>
-                                        <td>--</td>
-                                        <td>--</td>
-                                        <td>--</td>
-                                        <td><span class="status st-leave">On Leave</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="emp">
-                                                <div class="avatar light">HR</div>
-                                                <div>
-                                                    <div class="emp-name">Hina Raza</div>
-                                                    <div class="emp-id">EMP-1052</div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>Support</td>
-                                        <td>08:58 AM</td>
-                                        <td>05:15 PM</td>
-                                        <td>8h 17m</td>
-                                        <td><span class="status st-present">Present</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
 
         </div>
         <!-- end content -->
