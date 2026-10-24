@@ -1,9 +1,12 @@
-
-        /* ===== Page ===== */
+/* ===== Body (common for all pages) ===== */
         body {
             font-family: "Roboto", sans-serif;
-            background-color: #f3f3f3;
             color: #2b2b2b;
+        }
+
+        /* ===== Page wrapper (outer div) ===== */
+        .login-page {
+            background-color: #f3f3f3;
             min-height: 100dvh;
             display: flex;
             align-items: center;
@@ -11,7 +14,7 @@
             padding: 40px 20px;
         }
 
-        /* ===== Main card ===== */
+        /* ===== Main card (inner div) ===== */
         .login-card {
             width: 100%;
             max-width: 1095px;
@@ -250,4 +253,3 @@
         @media only screen and (max-width:320px){
 
         }
-    
