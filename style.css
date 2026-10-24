@@ -212,25 +212,42 @@
             margin-top: 24px;
         }
 
-        /* ===== Mobile ===== */
+        /* ===== Mobile /MEDIA QUERY ===== */
+        @media only screen and (max-width:1440px){}
+        @media only screen and (max-width:1024px){}
+
         @media only screen and (max-width: 860px) {
             .login-card {
                 flex-direction: column;
             }
 
             .hero {
-                width: 100%;
+                /* width: 100%;
                 min-height: 340px;
                 border-radius: 28px 28px 44px 44px;
-                padding: 0 24px 28px 24px;
+                padding: 0 24px 28px 24px; */
+                display: none;
             }
 
             .hero h1 {
                 font-size: 34px;
+                display: none;
             }
 
             .form-side {
                 width: 100%;
             }
+        }
+        @media only screen and (max-width:768px){
+
+        }
+        @media only screen and (max-width:425px){
+
+        }
+        @media only screen and (max-width:375px){
+
+        }
+        @media only screen and (max-width:320px){
+
         }
     
