@@ -3,7 +3,7 @@
             font-family: "Roboto", sans-serif;
             color: #2b2b2b;
         }
-
+/* == login css == */
         /* ===== Page wrapper (outer div) ===== */
         .login-page {
             background-color: #f3f3f3;
@@ -214,7 +214,31 @@
             color: #777777;
             margin-top: 24px;
         }
-
+/* == sign up form == */
+/* ===== Sign up page (extra css, loads after style.css) ===== */
+ 
+/* Photo is on the right side, so the round corners are changed */
+.hero {
+    border-radius: 44px 28px 28px 44px;
+}
+ 
+/* Section headings: Company Information / Admin Account Information */
+.section-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #2b2b2b;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+ 
+.section-title.second {
+    margin-top: 22px;
+}
+ 
+/* Red star for required fields */
+.req {
+    color: #e53935;
+}
         /* ===== Mobile /MEDIA QUERY ===== */
         @media only screen and (max-width:1440px){}
         @media only screen and (max-width:1024px){}
